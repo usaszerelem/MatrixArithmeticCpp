@@ -194,5 +194,51 @@ namespace MatrixUnitTest
                 Assert::IsFalse(true);
             }
         }
+
+        BEGIN_TEST_METHOD_ATTRIBUTE(ScalarMatrixMultiplication)
+            TEST_OWNER(L"Martin Fallenstedt")
+            TEST_PRIORITY(1)
+            TEST_MY_TRAIT(L"Scalar Matrix Multiplication")
+            END_TEST_METHOD_ATTRIBUTE()
+
+            TEST_METHOD(ScalarMatrixMultiplication)
+        {
+            int Data[] = { 1, 2, 3, 4, 5, 6 };
+
+            CMatrix<int> m(2, 3, Data, sizeof(Data) / sizeof(int));
+
+            CMatrix<int> p = m * 2;
+
+            Assert::AreEqual(2, p.GetAt(0, 0));
+            Assert::AreEqual(4, p.GetAt(0, 1));
+            Assert::AreEqual(6, p.GetAt(0, 2));
+            Assert::AreEqual(8, p.GetAt(1, 0));
+            Assert::AreEqual(10, p.GetAt(1, 1));
+            Assert::AreEqual(12, p.GetAt(1, 2));
+        }
+
+        // -------------------------------------------------------------------
+
+        BEGIN_TEST_METHOD_ATTRIBUTE(TwoMatrixMultiplication)
+            TEST_OWNER(L"Martin Fallenstedt")
+            TEST_PRIORITY(1)
+            TEST_MY_TRAIT(L"Two Matrix Multiplication")
+            END_TEST_METHOD_ATTRIBUTE()
+
+            TEST_METHOD(TwoMatrixMultiplication)
+        {
+            int Data1[] = { 1, 2, 3, 4, 5, 6 };
+            int Data2[] = { 7, 8, 9, 10, 11, 12 };
+
+            CMatrix<int> m1(2, 3, Data1, sizeof(Data1) / sizeof(int));
+            CMatrix<int> m2(3, 2, Data2, sizeof(Data2) / sizeof(int));
+
+            CMatrix<int> p = m1 * m2;
+
+            Assert::AreEqual(58, p.GetAt(0, 0));
+            Assert::AreEqual(64, p.GetAt(0, 1));
+            Assert::AreEqual(139, p.GetAt(1, 0));
+            Assert::AreEqual(154, p.GetAt(1, 1));
+        }
 	};
 }
