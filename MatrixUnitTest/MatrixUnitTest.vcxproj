@@ -165,7 +165,7 @@
     <ClCompile Include="CMatrixUnitTest.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MatrixMultiplication\MatrixMultiplication.vcxproj">
+    <ProjectReference Include="..\MatrixArithmetic\MatrixArithmetic.vcxproj">
       <Project>{e8387ff1-fb58-43a6-b2f3-4abaa8a00d99}</Project>
     </ProjectReference>
   </ItemGroup>

@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MatrixMultiplication", "MatrixMultiplication.vcxproj", "{E8387FF1-FB58-43A6-B2F3-4ABAA8A00D99}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MatrixArithmetic", ".\MatrixArithmetic\MatrixArithmetic.vcxproj", "{E8387FF1-FB58-43A6-B2F3-4ABAA8A00D99}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MatrixUnitTest", "..\MatrixUnitTest\MatrixUnitTest.vcxproj", "{CAA4688C-7BF5-46B2-ADD5-EEF2CE1915F6}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MatrixUnitTest", ".\MatrixUnitTest\MatrixUnitTest.vcxproj", "{CAA4688C-7BF5-46B2-ADD5-EEF2CE1915F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
